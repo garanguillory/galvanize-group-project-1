@@ -1,1 +1,16 @@
 /* add custom styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 170px;
+  background-color: black;
+  width: 100%;
+  padding: 20px;
+  color: white;
+}
+
+th img {
+  height: 20px;
+  width: 20px;
+}
