@@ -1,4 +1,33 @@
-/* add custom styles */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            Table of Contents
+1) universal styles
+  - Navbar
+  - Footer
+2) index.html
+3) products.html
+4) checkout.html
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+/*--------------------------------------
+            Universal Styles
+--------------------------------------*/
+
+/*++++++++++++  Navbar  ++++++++++++++*/
+
+.navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+/*++++++++++++  Footer  ++++++++++++++*/
+
 footer {
   position: fixed;
   bottom: 0;
@@ -14,3 +43,4 @@ th img {
   height: 20px;
   width: 20px;
 }
+
