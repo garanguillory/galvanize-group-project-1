@@ -47,9 +47,15 @@ $(document).on('ready', function() {
     var regionShip = $('#region-ship').val()
     var postalShip = $('#postal-code-ship').val()
     $('#first-name-bill').val(firstNameShip);
+    $('#last-name-bill').val(lastNameShip);
+    $('#company-bill').val(companyShip);
+    $('#address-line1-bill').val(adOneShip);
+    $('#address-line2-bill').val(adTwoShip);
+    $('#city-bill').val(cityShip);
+    $('#region-bill').val(regionShip);
+    $('#postal-code-bill').val(postalShip);
   })
 });
-
 // // ** End copying info from shipping to billing ** //
 
 
