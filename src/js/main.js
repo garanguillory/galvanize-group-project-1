@@ -34,10 +34,22 @@ function stripeResponseHandler(status, response) {
 };
 // ** End Stripe API ** //
 
+// ** Begin copying info from shipping to billing ** //
 $(document).on('ready', function() {
   console.log('sanity check!');
+  $('#copyInfo').on('click', function() {
+    var firstNameShip = $('#first-name-ship').val();
+    var lastNameShip = $('#last-name-ship').val()
+    var companyShip = $('#company-ship').val()
+    var adOneShip = $('#address-line1-ship').val()
+    var adTwoShip = $('#address-line2-ship').val()
+    var cityShip = $('#city-ship').val()
+    var regionShip = $('#region-ship').val()
+    var postalShip = $('#postal-code-ship').val()
+    $('#first-name-bill').val(firstNameShip);
+  })
 });
 
-
+// // ** End copying info from shipping to billing ** //
 
 
