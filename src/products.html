@@ -46,6 +46,7 @@
       </nav>
 
       <!-- Beginning of products page -->
+      <!-- need to add classes in order to filter shoes -->
       <header>
         <h1>Products</h1>
         <div class="col-md-3">
@@ -53,82 +54,73 @@
           <h4>Shoe Color:</h4>
         </div>
         <div class="col-md-3">
-          <h4>Small</h4>
-          <h4>Red</h4>
+          <!-- options small/red -->
+          <h4><span class="option-small">Small</span></h4>
+          <h4><span class="option-red">Red</span></h4>
         </div>
         <div class="col-md-3">
-          <h4>Medium</h4>
-          <h4>Blue</h4>
+          <!-- options medium/blue -->
+          <h4><span class="option-medium">Medium</span></h4>
+          <h4><span class="option-blue">Blue</span></h4>
         </div>
         <div class="col-md-3">
-          <h4>Large</h4>
-          <h4>Black</h4>
+          <!-- options large/black -->
+          <h4><span class="option-large">Large</span></h4>
+          <h4><span class="option-black">Black</span></h4>
         </div>
       </header>
       <section>
         <table>
           <tr>
-            <td>
+            <td class="large black">
               <img src="../assets/Shoes.png" class="products">
               <p>Size: Large</p>
             </td>
-            <td>
+            <td class="small blue">
               <img src="../assets/Shoe_Blue_2.png" class="products">
               <p>Size: Small</p>
             </td>
-            <td>
+            <td class="small red">
               <img src="../assets/Shoe_Red_2.png" class="products">
               <p>Size: Small</p>
             </td>
-            <td>
+            <td class="medium black">
               <img src="../assets/Shoes.png" class="products">
               <p>Size: Medium</p>
             </td>
-            <!-- <td>
-              <h2>Shoes</h2>
-              <h4>Price: $10.00</h4>
-              <img src="http://vignette3.wikia.nocookie.net/nickfanon/images/4/4e/4-star-rating.png/revision/latest?cb=20140526013858" height="7%" width="15%">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-                in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.</p>
-            </td> -->
           </tr>
           <tr>
-            <td>
+            <td class="medium red">
               <img src="../assets/Shoe_Red.png" class="products">
               <p>Size: Medium</p>
             </td>
-            <td>
+            <td class="large black">
               <img src="../assets/Shoes.png" class="products">
               <p>Size: Large</p>
             </td>
-            <td>
+            <td class="small blue">
               <img src="../assets/Shoe_Blue.png" class="products">
               <p>Size: Small</p>
             </td>
-            <td>
+            <td class="medium black">
               <img src="../assets/Shoes.png" class="products">
               <p>Size: Meduim</p>
             </td>
           </tr>
           <tr>
-            <td>
+            <td class="small blue">
               <img src="../assets/Shoe_Blue.png" class="products">
               <p>Size: Small</p>
             </td>
-            <td>
+            <td class="large red">
               <img src="../assets/Shoe_Red.png" class="products">
               <p>Size: Large</p>
             </td>
-            <td>
+            <td class="large black">
               <img src="../assets/Shoes.png" class="products">
               <p>Size: Large</p>
             </td>
-            <td>
+            <td class="small red">
               <img src="../assets/Shoe_Red_2.png" class="products">
               <p>Size: Small</p>
             </td>
@@ -192,5 +184,6 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/utilities.js"></script>
   </body>
 </html>
