@@ -3,7 +3,6 @@ Stripe.setPublishableKey('pk_test_6pRNASCoBOKtIshFeQd4XMUh');
 
 $(function($) {
   $('#payment-form').submit(function(event) {
-    prevent.default();
     var $form = $(this);
 
     // Disable the submit button to prevent repeated clicks
@@ -26,12 +25,11 @@ function stripeResponseHandler(status, response) {
   } else {
     // response contains id and card, which contains additional card details
     var token = response.id;
-    Stripe.card.validateCardNumber($('.card-number').val());
+    Stripe.card.validateCardNumber(token.number);
     Stripe.card.validateExpiry(token.exp_month, token.exp_year);
-    Stripe.card.validateCVC(token.cvc)
-    // Insert the token into the form so it gets submitted to the server
+    Stripe.card.validateCVC(token.cvc);
   }
-};
+}
 // ** End Stripe API ** //
 
 // ** Begin copying info from shipping to billing ** //
@@ -39,13 +37,13 @@ $(document).on('ready', function() {
   console.log('sanity check!');
   $('#copyInfo').on('click', function() {
     var firstNameShip = $('#first-name-ship').val();
-    var lastNameShip = $('#last-name-ship').val()
-    var companyShip = $('#company-ship').val()
-    var adOneShip = $('#address-line1-ship').val()
-    var adTwoShip = $('#address-line2-ship').val()
-    var cityShip = $('#city-ship').val()
-    var regionShip = $('#region-ship').val()
-    var postalShip = $('#postal-code-ship').val()
+    var lastNameShip = $('#last-name-ship').val();
+    var companyShip = $('#company-ship').val();
+    var adOneShip = $('#address-line1-ship').val();
+    var adTwoShip = $('#address-line2-ship').val();
+    var cityShip = $('#city-ship').val();
+    var regionShip = $('#region-ship').val();
+    var postalShip = $('#postal-code-ship').val();
     $('#first-name-bill').val(firstNameShip);
     $('#last-name-bill').val(lastNameShip);
     $('#company-bill').val(companyShip);
@@ -54,7 +52,7 @@ $(document).on('ready', function() {
     $('#city-bill').val(cityShip);
     $('#region-bill').val(regionShip);
     $('#postal-code-bill').val(postalShip);
-  })
+  });
 });
 // // ** End copying info from shipping to billing ** //
 
